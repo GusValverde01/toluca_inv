@@ -35,7 +35,7 @@ include("../../templates/header.php");
             class="btn btn-primary"
             href="crear.php"
             role="button"
-            >Agregar Anuncio</a
+            >Agregar Entrada</a
         >
     </div>
     <div class="card-body">

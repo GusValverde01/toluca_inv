@@ -59,6 +59,25 @@
             .offcanvas-body .navbar-nav {
                 margin-top: 1.5rem; /* Ajusta el valor según necesites */
             }
+            
+            html, body {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            main {
+                flex: 1; /* Permite que el contenido principal crezca y empuje el footer */
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 1rem;
+                position: relative; /* Evita que se sobreponga */
+                width: 100%;
+            }
         </style>
     </head>
     <body id="page-top">
@@ -92,7 +111,7 @@
             </div>
         </nav>
         
-
+<main class="contenido">
         <section class="container px-4 px-lg-5 h-100 page-section">
            
                 <!-- Titulo -->
@@ -267,14 +286,19 @@
                         </div>
                     </section>
                 </div>
-
-            
-
         </section>
+</main>
 
+        <!-- Footer-->
+        <footer class="bg-light py-5 footer">
+            <div class="container px-4 px-lg-5">
+                <div class="small text-center text-muted"> I T &copy; - <span id="year"></span> </div>
+            </div>
+        </footer>
 
-        
-        
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
